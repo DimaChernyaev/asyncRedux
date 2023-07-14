@@ -4,7 +4,7 @@ export const SearchInput = styled.input`
     padding: 5px 12px;
     border-color: goldenrod;
     border-radius: 40px;
-    width: 300px;
+    width: 350px;
     font-size: 16px;
     text-align: center;
 `;

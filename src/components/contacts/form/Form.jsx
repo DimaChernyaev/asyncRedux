@@ -43,7 +43,7 @@ const Form = () => {
     number: '',
   };
 
-  function submitForm(values, { resetForm }) {
+  async function submitForm(values, { resetForm }) {
     const repeatContactNeme = repeatName(contacts, values.name);
 
     if (repeatContactNeme) {
@@ -51,8 +51,9 @@ const Form = () => {
       resetForm();
       return;
     }
-    
-    dispatch(addContacts(values))
+
+    await dispatch(addContacts(values));
+    toast.success(`Contact named ${values.name} has been add.`);
 
     resetForm();
   }

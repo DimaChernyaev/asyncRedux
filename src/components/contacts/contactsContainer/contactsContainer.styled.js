@@ -1,11 +1,14 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  width: 324px;
   padding: 12px;
   background: rgba(176, 230, 237, 0.5);
   border-radius: 8px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const NullContactsMessage = styled.p`

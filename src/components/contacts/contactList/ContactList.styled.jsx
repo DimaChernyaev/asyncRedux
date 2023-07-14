@@ -10,9 +10,9 @@ export const ContactList = styled.ul`
 export const Contact = styled.li`
   display: flex;
   align-items: center;
-  width: 300px;
+  width: 330px;
   gap: 12px;
-  padding: 8px;
+  padding: 8px 12px;
   border: 2px solid goldenrod;
   border-radius: 8px;
   background-color: white;
@@ -20,7 +20,7 @@ export const Contact = styled.li`
 
 export const ContactText = styled.div`
   color: black;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
 `;
 

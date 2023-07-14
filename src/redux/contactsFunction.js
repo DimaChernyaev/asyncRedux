@@ -1,9 +1,11 @@
 export const handlePendingAll = state => {
   state.isLoading.isAllLoading = true;
+  state.error = null;
 };
 
 export const handlePendingDelete = state => {
   state.isLoading.isDeleteLoading = true;
+  state.error = null;
 };
 
 export const handleRejectedAll = (state, action) => {
@@ -32,7 +34,7 @@ export const handleFulfilledDeleteContact = (state, action) => {
 };
 
 export const handleFulfilledAddContact = (state, action) => {
-  state.isLoading = false;
+  state.isLoading.isAllLoading = false;
   state.error = null;
   state.items.push(action.payload);
 };

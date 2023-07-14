@@ -42,7 +42,7 @@ export const Input = styled(Field)`
     padding: 5px 12px;
     border-color: goldenrod;
     border-radius: 40px;
-    width: 300px;
+    width: 350px;
     font-size: 18px;
     text-align: center;
 `;
