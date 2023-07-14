@@ -21,15 +21,3 @@ export const TitleContactList = styled.h2`
     color: black;
     margin-bottom: 12px;
 `;
-
-export const ContactsContainer = styled.div`
-    padding: 12px;
-    background: rgba(176, 230, 237, 0.5);
-    border-radius: 8px;
-`;
-
-export const NullContactsMessage = styled.p`
-  font-size: 18px;
-  color: black;
-  text-align: center;
-`;

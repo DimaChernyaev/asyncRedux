@@ -9,11 +9,11 @@ import {
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
 import { repeatName } from 'components/helpers/repeatName';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { selectContacts } from 'redux/selectors';
+import { addContacts } from 'redux/operation';
+import { selectContactsItems } from 'redux/selectors';
 
 const validationSchema = yup.object().shape({
   name: yup
@@ -36,7 +36,7 @@ const validationSchema = yup.object().shape({
 
 const Form = () => {
   const dispatch = useDispatch();
-  const contacts = useSelector(selectContacts);
+  const contacts = useSelector(selectContactsItems);
 
   const initialValues = {
     name: '',
@@ -51,8 +51,9 @@ const Form = () => {
       resetForm();
       return;
     }
+    
+    dispatch(addContacts(values))
 
-    dispatch(addContact(values));
     resetForm();
   }
 

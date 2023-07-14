@@ -21,6 +21,7 @@ export const Contact = styled.li`
 export const ContactText = styled.div`
   color: black;
   font-size: 14px;
+  text-align: left;
 `;
 
 export const ButtonDelete = styled.button`
